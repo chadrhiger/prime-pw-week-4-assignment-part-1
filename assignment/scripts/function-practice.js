@@ -16,7 +16,7 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 
-
+// coming back to this, it feels sloppy now. if i have time i'll try to clean it up. -C
 function helloName( name ) {
   return name;
 }
@@ -56,16 +56,25 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 
-          // let things = ['stuff', 'crap', 'junk', 'refuse']
-          // let weirdColorNames = ['puce', 'smalt', 'jasper']
-          // let nonThings = [] 
+// declare arrays
+// declare function
+// if else to determine if array has anything in it
+// return last item of array when function is called
+// unless the array is empty, in which case return undefined
+// scrap all that, find the right hint with google, 
+// and laugh at how much you were overthinking the problem--ya learnin, baby!
 
-          // function getLast( array ) {
-          //   for(let i=0; i<array.length; i++){
-          //     return array -1;
-          //   }  
-          // }       
-          // console.log(getLast());
+let things = ['stuff', 'crap', 'junk', 'refuse']
+let weirdColorNames = ['puce', 'smalt', 'jasper']
+let nonThings = [] 
+
+function getLast( array ) {
+  return array[array.length -1];
+}       
+
+console.log( 'The last item in "things" array is:', getLast(things) );
+console.log( 'The last item in "weirdColorNames" array is:', getLast(weirdColorNames) );
+console.log( 'The last item in "nonThings" array is:', getLast(nonThings) );          
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
