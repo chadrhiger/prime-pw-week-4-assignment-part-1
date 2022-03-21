@@ -58,14 +58,12 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // declare arrays
 // declare function
-// if else to determine if array has anything in it
-// return last item of array when function is called
-// unless the array is empty, in which case return undefined
-// scrap all that, find the right hint with google, 
-// and laugh at how much you were overthinking the problem--ya learnin, baby!
+// return the last item in array using array[array.length -1]
+// log out getLast referencing each arrayName
 
 let things = ['stuff', 'crap', 'junk', 'refuse']
 let weirdColorNames = ['puce', 'smalt', 'jasper']
+let someNumbers = [42, 59, 101]
 let nonThings = [] 
 
 function getLast( array ) {
@@ -75,13 +73,26 @@ function getLast( array ) {
 console.log( 'The last item in "things" array is:', getLast(things) );
 console.log( 'The last item in "weirdColorNames" array is:', getLast(weirdColorNames) );
 console.log( 'The last item in "nonThings" array is:', getLast(nonThings) );          
+console.log( 'The last item in "someNumbers" array is:', getLast(someNumbers) );
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+
+
+
 function find( value, array ){
-  
+  for (let item of array){
+    if (value === item){
+      return true;
+    }
+  }
+  return false;
 }
+console.log( '42 is in my array (expect true):', find( 42, someNumbers ));
+console.log( '51 is in my array (expect false):', find( 51, someNumbers ));
+console.log( '59 is in my array (expect true):', find( 59, someNumbers ));
+
 
 // ----------------------
 // Stretch Goals
